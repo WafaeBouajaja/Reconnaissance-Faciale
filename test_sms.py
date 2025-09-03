@@ -1,15 +1,17 @@
+import os
 from twilio.rest import Client
 
-# Remplace ces 4 infos par les tiennes depuis https://www.twilio.com/console
-account_sid = 'AC89e54523e0c7451aba663133513c8896'
-auth_token = 'eae98c953d61f7d77ee1d9ffe6b2a0d1'
-twilio_number = '+1 417 742 8375'
-my_number = '+212649962872'
+# Récupération des identifiants depuis les variables d'environnement
+account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+twilio_number = os.getenv("TWILIO_NUMBER")     
+my_number = os.getenv("MY_NUMBER")              
 
-# Création du client Twilio
+if not account_sid or not auth_token:
+    raise RuntimeError("TWILIO_ACCOUNT_SID et TWILIO_AUTH_TOKEN doivent être définis dans les variables d'environnement")
+
 client = Client(account_sid, auth_token)
 
-# Envoi du SMS
 message = client.messages.create(
     body="🚀 Test Twilio : ça marche !",
     from_=twilio_number,
@@ -17,3 +19,4 @@ message = client.messages.create(
 )
 
 print("[✅ SMS envoyé]")
+
