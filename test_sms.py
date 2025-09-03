@@ -1,5 +1,5 @@
 import os
-from twilio.rest import Client
+from twilio.rest import Client # type: ignore
 
 # Récupération des identifiants depuis les variables d'environnement
 account_sid = os.getenv("TWILIO_ACCOUNT_SID")
