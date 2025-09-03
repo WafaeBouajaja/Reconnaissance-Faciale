@@ -39,8 +39,8 @@ Ce système combine vision par ordinateur, apprentissage automatique et services
 ## ⚙️ Installation
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/username/repo-name.git
-   cd repo-name
+   git clone https://github.com/WafaeBouajaja/Reconnaissance-Faciale.git
+   cd Reconnaissance-Faciale
    ```
 
 2. Installez les dépendances :
@@ -57,8 +57,8 @@ Ce système combine vision par ordinateur, apprentissage automatique et services
   ```env
   TWILIO_ACCOUNT_SID=xxxxxxxxxxxxxxxxxxxx
   TWILIO_AUTH_TOKEN=xxxxxxxxxxxxxxxxxxxx
-  TWILIO_PHONE_NUMBER=+123456789
-  ALERT_PHONE_NUMBER=+987654321
+  TWILIO_PHONE_NUMBER=xxxxxxxxx
+  ALERT_PHONE_NUMBER=xxxxxxxxx
   ```
 
 ### 🖼️ Préparation des images de référence
